@@ -13,6 +13,12 @@
   </head>
 
   <body>
+    <% flash().each do |key, msg| %>
+      <div data-alert class="alert-box <%= key %>">
+        <%= msg %>
+        <a href="#" class="close">&times;</a>
+      </div>
+    <% end %>
 
     <%= yield %>
 
